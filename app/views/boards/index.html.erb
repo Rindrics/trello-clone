@@ -3,7 +3,7 @@
 <div>
   <% @boards.each do |board| %>
     <div class="board">
-      <a href="/boards/ <%= board.id %>">
+      <a href=<%= board_path(board) %>>
          <%= board.name %>
       </a>
     </div>
