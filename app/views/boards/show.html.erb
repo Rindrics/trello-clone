@@ -1,3 +1,7 @@
 <h1><%= @board.name %></h1>
 
+<ul>
+  <li><%= link_to "Edit", edit_board_path(@board) %></li>
+</ul>
+
 <%= link_to "Back to Boards", boards_path %>
