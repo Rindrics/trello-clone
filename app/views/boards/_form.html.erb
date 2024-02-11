@@ -8,14 +8,8 @@
     <% end %>
   </div>
   <div class='status'>
-    <div>
-      <%= form.label :status_active, "active" %><br>
-      <%= form.radio_button :status, :active %>
-    </div>
-    <div>
-      <%= form.label :status_archived, "archived" %><br>
-      <%= form.radio_button :status, :archived %>
-    </div>
+    <%= form.label :status, "status" %><br>
+    <%= form.select :status, Visible::VALID_STATUSES, selected: board.status || 'active' %>
   </div>
 
   <div>

@@ -6,4 +6,8 @@
   <p>
     <%= form.submit %>
   </p>
+  <div class='status'>
+    <%= form.label :status, "status" %><br>
+    <%= form.select :status, Visible::VALID_STATUSES, selected: 'active' %>
+  </div>
 <% end %>
