@@ -10,3 +10,20 @@
 </ul>
 
 <%= link_to "Back to Boards", boards_path %>
+
+<% @board.lists.each do |list| %>
+  <h2>
+    <%= list.name %>
+  </h2>
+<% end %>
+
+<h2>Add Another List:</h2>
+<%= form_with model: [ @board, @board.lists.build ] do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
