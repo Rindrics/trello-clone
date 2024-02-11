@@ -10,3 +10,10 @@
 </ul>
 
 <%= link_to "Back to Boards", boards_path %>
+
+<%= render @board.lists %>
+
+<h2>Add Another List</h2>
+<div id="list-form">
+  <%= render 'lists/form' %>
+</div>

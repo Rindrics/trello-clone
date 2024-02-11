@@ -1,0 +1,16 @@
+<%= form_with model: [ @board, @list || @board.lists.build ] do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+  <% if @list&.persisted? %>
+    <div class='status'>
+      <%= form.label :status, "status" %><br>
+      <%= form.select :status, Visible::VALID_STATUSES, selected: @list.status %>
+    </div>
+  <% end %>
+
+<% end %>

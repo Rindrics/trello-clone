@@ -17,6 +17,7 @@ class BoardsController < ApplicationController
     if @board.save
       redirect_to @board
     else
+      puts @board.errors.full_messages
       render :new, status: :unprocessable_entity
     end
   end
@@ -31,7 +32,7 @@ class BoardsController < ApplicationController
     if @board.update(board_params)
       redirect_to @board
     else
-      render :edit, :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -44,6 +45,6 @@ class BoardsController < ApplicationController
 
   private
     def board_params
-      params.require(:board).permit(:name)
+      params.require(:board).permit(:name, :status)
     end
 end
