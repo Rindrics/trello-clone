@@ -32,7 +32,7 @@ class BoardsController < ApplicationController
     if @board.update(board_params)
       redirect_to @board
     else
-      render :edit, :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
