@@ -8,7 +8,7 @@
     <% end %>
   </div>
   <% if @board.persisted? %>
-    <div class='status'>
+    <div class="status">
       <%= form.label :status, "status" %><br>
       <%= form.select :status, Visible::VALID_STATUSES, selected: @board.status %>
     </div>
