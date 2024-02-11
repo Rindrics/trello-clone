@@ -17,6 +17,7 @@ class BoardsController < ApplicationController
     if @board.save
       redirect_to @board
     else
+      puts @board.errors.full_messages
       render :new, status: :unprocessable_entity
     end
   end
