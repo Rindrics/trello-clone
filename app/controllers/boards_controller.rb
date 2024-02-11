@@ -12,7 +12,7 @@ class BoardsController < ApplicationController
   end
 
   def create
-    @board = Board.new(board_params)
+    @board = Board.new(board_params.merge(status: "active"))
 
     if @board.save
       redirect_to @board
