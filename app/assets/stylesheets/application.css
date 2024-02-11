@@ -10,3 +10,22 @@ h1 {
   margin-top: 0;
   padding-top: 1em;
 }
+
+#lists {
+  display: flex;
+}
+
+.list {
+  align-items: left;
+  background-color: #edeff1;
+  border-radius: 15px;
+  width: 200px;
+  margin: 1em;
+  padding: 20px;
+  padding-top: 2px;
+}
+
+.list.add {
+  background-color: #4791b8;
+  color: #edeff1;
+}
