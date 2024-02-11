@@ -9,7 +9,7 @@ default: &default
   encoding: unicode
   host: db
   username: postgres
-  password: password
+  password: <%= ENV.fetch("DB_PASSWORD") %>
   pool: 5
 
 development:
