@@ -2,9 +2,11 @@
 
 <div>
   <% @boards.each do |board| %>
-    <div class="board">
-      <%= link_to board.name, board %>
-    </div>
+    <% unless board.archived? %>
+      <div class="board">
+        <%= link_to board.name, board %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 

@@ -1,3 +1,5 @@
-<h2>
-  <%= list.name %>
-</h2>
+<% unless list.archived? %>
+  <h2>
+    <%= list.name %>
+  </h2>
+<% end %>
