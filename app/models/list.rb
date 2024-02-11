@@ -1,11 +1,5 @@
 class List < ApplicationRecord
+  include Visible
+
   belongs_to :board
-
-  VALID_STATUSES = ['active', 'archived']
-
-  validates :status, inclusion: { in: VALID_STATUSES }
-
-  def archived?
-    status == 'archived'
-  end
 end
