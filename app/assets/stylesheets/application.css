@@ -11,6 +11,12 @@ h1 {
   padding-top: 1em;
 }
 
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+  text-align: left;
+}
+
 #board-controller {
   display: flex;
 }
@@ -31,6 +37,13 @@ h1 {
   margin: 1em;
   padding: 20px;
   padding-top: 2px;
+}
+
+.list .header {
+  margin: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .list.add {
