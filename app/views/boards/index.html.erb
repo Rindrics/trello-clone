@@ -1,11 +1,15 @@
 <h1>Boards</h1>
 
-<div>
+<div id="boards-container">
   <% @boards.each do |board| %>
     <% unless board.archived? %>
-      <div class="board">
-        <%= link_to board.name, board %>
-      </div>
+      <%= link_to board_path(board) do %>
+        <div class="board">
+          <h2>
+            <%= board.name %>
+          </h2>
+        </div>
+      <% end %>
     <% end %>
   <% end %>
 </div>
