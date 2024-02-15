@@ -1,7 +1,15 @@
 <% unless list.archived? %>
   <div class="list">
-    <h2>
-      <%= list.name %>
-    </h2>
+    <div class="header">
+      <h2>
+        <%= list.name %>
+      </h2>
+      <button class="delete-list" data-list-id="<%= list.id %>">
+          <%= link_to "x", [list.board, list], data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?"
+                      } %>
+      </button>
+    </div>
   </div>
 <% end %>

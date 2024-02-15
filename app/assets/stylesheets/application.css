@@ -1,7 +1,7 @@
 body {
   background-color: #1e7eaf;
   font-family: 'Roboto', sans-serif;
-  color: 4b566f;
+  color: #4b566f;
 }
 
 h1 {
@@ -11,8 +11,37 @@ h1 {
   padding-top: 1em;
 }
 
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+  text-align: center;
+}
+
 #board-controller {
   display: flex;
+}
+
+#boards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+#boards-container a {
+  text-decoration: none;
+}
+
+.board {
+  display: block;
+  color: #edeff1;
+  margin: 10px 20px;
+  padding: 20px 0px;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #3e5774;
+  border-radius: 5px;
 }
 
 .link {
@@ -31,6 +60,22 @@ h1 {
   margin: 1em;
   padding: 20px;
   padding-top: 2px;
+}
+
+.list a {
+  text-decoration: none;
+}
+
+.list .header {
+  margin: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.list button {
+  border: none;
+  font-size: 1.5em;
 }
 
 .list.add {
