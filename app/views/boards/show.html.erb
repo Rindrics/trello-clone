@@ -1,19 +1,23 @@
-<h1><%= @board.name %></h1>
+<div id="board-controller">
+  <div class="link">
+    <%= link_to "<", boards_path %>
+  </div>
+  <h1><%= @board.name %></h1>
 
-<ul>
-  <li><%= link_to "Edit", edit_board_path(@board) %></li>
-  <li> <%= link_to "Destroy", board_path(@board),
+  <div class="link"><%= link_to "Edit", edit_board_path(@board) %></div>
+  <div class="link"> <%= link_to "Destroy", board_path(@board),
         data: {
         turbo_method: :delete,
         turbo_confirm: "Are you sure?"
-        } %></li>
-</ul>
+        } %></div>
+</div>
 
-<%= link_to "Back to Boards", boards_path %>
-
-<%= render @board.lists %>
-
-<h2>Add Another List</h2>
-<div id="list-form">
-  <%= render 'lists/form' %>
+<div id="lists">
+  <%= render @board.lists %>
+  <div class="list add">
+    <h2>Add Another List</h2>
+    <div id="list-form">
+      <%= render 'lists/form' %>
+    </div>
+  </div>
 </div>

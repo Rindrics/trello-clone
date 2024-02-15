@@ -1,13 +1,13 @@
 <%= form_with model: [ @board, @list || @board.lists.build ] do |form| %>
-  <p>
+  <div>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
-  </p>
+  </div>
   <p>
     <%= form.submit %>
   </p>
   <% if @list&.persisted? %>
-    <div class='status'>
+    <div class="status">
       <%= form.label :status, "status" %><br>
       <%= form.select :status, Visible::VALID_STATUSES, selected: @list.status %>
     </div>
