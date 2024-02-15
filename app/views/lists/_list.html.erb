@@ -7,6 +7,12 @@
       <button class="archive-list" data-list-id="<%= list.id %>">
         x
       </button>
+      <p>
+          <%= link_to "Destroy List", [list.board, list], data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?"
+                      } %>
+      </p>
     </div>
   </div>
 <% end %>
