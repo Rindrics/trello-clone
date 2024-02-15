@@ -4,15 +4,12 @@
       <h2>
         <%= list.name %>
       </h2>
-      <button class="archive-list" data-list-id="<%= list.id %>">
-        x
-      </button>
-      <p>
-          <%= link_to "Destroy List", [list.board, list], data: {
+      <button class="delete-list" data-list-id="<%= list.id %>">
+          <%= link_to "x", [list.board, list], data: {
                       turbo_method: :delete,
                       turbo_confirm: "Are you sure?"
                       } %>
-      </p>
+      </button>
     </div>
   </div>
 <% end %>
