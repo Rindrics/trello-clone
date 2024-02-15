@@ -1,4 +1,6 @@
 class ListsController < ApplicationController
+  http_basic_authenticate_with name: ENV["BASIC_AUTH_USERNAME"], password: ENV["BASIC_AUTH_PASSWORD"], only: :destroy
+
   def create
     @board = Board.find(params[:board_id])
     @list = @board.lists.create(list_params.merge(status: 'active'))
